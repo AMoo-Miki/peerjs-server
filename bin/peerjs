@@ -6,59 +6,59 @@ var path = require('path')
   , version = pkg.version
   , PeerServer = require('../lib').PeerServer
   , util = require('../lib/util')
-  , opts = require('optimist')
+  , opts = require('yargs')
     .usage('Usage: $0')
     .options({
       debug: {
-        demand: false,
+        demandOption: false,
         alias: 'd',
         description: 'debug',
         default: false
       },
       timeout: {
-        demand: false,
+        demandOption: false,
         alias: 't',
         description: 'timeout (milliseconds)',
         default: 5000
       },
       ip_limit: {
-        demand: false,
+        demandOption: false,
         alias: 'i',
         description: 'IP limit',
         default: 5000
       },
       concurrent_limit: {
-        demand: false,
+        demandOption: false,
         alias: 'c',
         description: 'concurrent limit',
         default: 5000
       },
       key: {
-        demand: false,
+        demandOption: false,
         alias: 'k',
         description: 'connection key',
         default: 'peerjs'
       },
       sslkey: {
-        demand: false,
+        demandOption: false,
         description: 'path to SSL key'
       },
       sslcert: {
-        demand: false,
+        demandOption: false,
         description: 'path to SSL certificate'
       },
       port: {
-        demand: true,
+        demandOption: true,
         alias: 'p',
         description: 'port'
       },
       path: {
-        demand: false,
+        demandOption: false,
         description: 'custom path',
         default: '/'
       },
       allow_discovery: {
-        demand: false,
+        demandOption: false,
         description: 'allow discovery of peers'
       }
     })
